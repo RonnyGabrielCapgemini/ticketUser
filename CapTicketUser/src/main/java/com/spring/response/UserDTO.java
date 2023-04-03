@@ -55,6 +55,16 @@ public class UserDTO implements Serializable{
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
+
+	public static User save(User user) {
+
+		return null;
+	}
+
+	public static User deleteById(int id) {
+		
+		return null;
+	}
 	
 	
 }
