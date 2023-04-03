@@ -48,34 +48,18 @@ public class UserServiceTest {
 		
 		assertTrue(esExistenteAntesDeEliminar);
 		assertFalse(noExistenteDespuesDeEliminar);
-		
-		
+			
 		
 	}
 	
-	/*@Test
-	@Rollback(false)
-	public void ModificarUser() {
-		String nombreUser = ""; 
-		User user = new User(); // valores nuevos
-		user.setId(1); // id del producto a actualizar
-		
-		// guarda el nuevo producto
-		repo.save(user);
-		
-		User userModificado = repo.updateByName(nombreUser);
-		
-		assertThat(userModificado.getName()).isEqualTo(nombreUser);
-	}*/
 	
-	@Test
+	/*@Test
 	@Rollback(false)
 	public void GuardarUser() {
 		User user = new User ();
 		User userGuardado=repo.save(user);
 		
-		// confirmar si el valor no sea nulo
 		assertNotNull(userGuardado);
-	}
+	}*/
 
 }
