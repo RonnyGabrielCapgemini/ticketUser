@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+
 import com.spring.model.User;
 import com.spring.repository.UserRepository;
 
@@ -28,6 +29,10 @@ public class UserServiceImpl implements UserService {
 	// -- ELIMINAR
 		public void deleteById(int id) {
 			userrepo.deleteById(id);
+		}
+	// -- GUARDAR
+		public User save(User user) {
+			return userrepo.save(user);
 		}
 	
 
