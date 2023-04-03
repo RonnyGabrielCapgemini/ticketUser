@@ -12,23 +12,24 @@ public class User {
     // Propiedades de la entidad User
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String name;
     private String lastName;
     private String password;
-    private String email;
+    private String mail;
     private Date registerDate;
 
-     // Métodos: Getter & Setter
-    public Long getId() {
-        return id;
-    }
+    
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public int getId() {
+		return id;
+	}
 
-    public String getName() {
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
         return name;
     }
 
@@ -52,12 +53,12 @@ public class User {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    public String getMail() {
+        return mail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
     public Date getRegisterDate() {
@@ -76,7 +77,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
+                ", email='" + mail + '\'' +
                 ", registerDate=" + registerDate +
                 '}';
     }
