@@ -1,6 +1,8 @@
 package com.spring.response;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import com.spring.model.User;
 
@@ -19,6 +21,10 @@ public class UserDTO implements Serializable{
 		userDto.setLastname(user.getLastName());
 		userDto.setMail(user.getMail());
 		return userDto;
+	}
+	
+	public static List<UserDTO> of(List<User> users) {
+		return users.stream().map(c -> of(c)).collect(Collectors.toList());
 	}
 	
 	@Override
