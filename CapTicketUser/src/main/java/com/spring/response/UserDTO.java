@@ -2,6 +2,9 @@ package com.spring.response;
 
 import java.io.Serializable;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import com.spring.model.User;
 
 public class UserDTO implements Serializable{
@@ -21,6 +24,12 @@ public class UserDTO implements Serializable{
 		return userDto;
 	}
 	
+
+	public static List<UserDTO> of(List<User> users) {
+		return users.stream().map(c -> of(c)).collect(Collectors.toList());
+	}
+	
+
 	@Override
 	public String toString() {
 		return "UserDTO [id=" + id + ", name=" + name + ", lastname=" + lastname + ", mail=" + mail + "]";
@@ -49,6 +58,18 @@ public class UserDTO implements Serializable{
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
+
+
+	public static User save(User user) {
+
+		return null;
+	}
+
+	public static User deleteById(int id) {
+		
+		return null;
+	}
+
 	
 	
 }

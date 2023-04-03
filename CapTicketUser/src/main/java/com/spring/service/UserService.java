@@ -12,10 +12,10 @@ public interface UserService {
 	//--LISTAR 
 		public List<User> findAll();
 		
-	//--MODIFICAR
+
 		
 		public void update(User user);
-		
+
 	//--ELIMINAR
 		
 		public void deleteById(int id);
