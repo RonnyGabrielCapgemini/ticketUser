@@ -2,6 +2,7 @@ package com.spring;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
@@ -12,7 +13,6 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
-
 
 import com.spring.model.User;
 import com.spring.repository.UserRepository;
@@ -67,5 +67,15 @@ public class UserServiceTest {
 		
 		assertThat(userModificado.getName()).isEqualTo(nombreUser);
 	}*/
+	
+	@Test
+	@Rollback(false)
+	public void GuardarUser() {
+		User user = new User ();
+		User userGuardado=repo.save(user);
+		
+		// confirmar si el valor no sea nulo
+		assertNotNull(userGuardado);
+	}
 
 }

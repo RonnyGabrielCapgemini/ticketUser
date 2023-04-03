@@ -11,5 +11,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 			public void update(User user);
 			
 			public User updateByName(String name);
+			
+			
 
 }
