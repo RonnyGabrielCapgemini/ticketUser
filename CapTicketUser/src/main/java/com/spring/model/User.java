@@ -4,9 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
 import java.util.Date;
 
 @Entity
+@Table(name="userticket")
 public class User {
 
     // Propiedades de la entidad User
@@ -14,10 +17,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String lastName;
+    private String lastname;
     private String password;
     private String mail;
-    private Date registerDate;
+    private Date registerdate;
 
     
 
@@ -38,11 +41,11 @@ public class User {
     }
 
     public String getLastName() {
-        return lastName;
+        return lastname;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastname = lastName;
     }
 
     public String getPassword() {
@@ -62,11 +65,11 @@ public class User {
     }
 
     public Date getRegisterDate() {
-        return registerDate;
+        return registerdate;
     }
 
     public void setRegisterDate(Date registerDate) {
-        this.registerDate = registerDate;
+        this.registerdate = registerDate;
     }
 
     // Método: ToString
@@ -75,10 +78,10 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", lastName='" + lastname + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + mail + '\'' +
-                ", registerDate=" + registerDate +
+                ", registerDate=" + registerdate +
                 '}';
     }
 }
