@@ -21,67 +21,61 @@ public class User {
     private String password;
     private String mail;
     private Date registerdate;
-
-    
-
-    public int getId() {
+	public int getId() {
 		return id;
+	}
+	
+	public User() {
+		super();
 	}
 
 	public void setId(int id) {
 		this.id = id;
 	}
-
 	public String getName() {
-        return name;
-    }
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getMail() {
+		return mail;
+	}
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+	public Date getRegisterdate() {
+		return registerdate;
+	}
+	public void setRegisterdate(Date registerdate) {
+		this.registerdate = registerdate;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", lastname=" + lastname + ", password=" + password + ", mail="
+				+ mail + ", registerdate=" + registerdate + "]";
+	}
+	public User(int id, String name, String lastname, String password, String mail, Date registerdate) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.lastname = lastname;
+		this.password = password;
+		this.mail = mail;
+		this.registerdate = registerdate;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastname;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastname = lastName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
-    public Date getRegisterDate() {
-        return registerdate;
-    }
-
-    public void setRegisterDate(Date registerDate) {
-        this.registerdate = registerDate;
-    }
-
-    // Método: ToString
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastname + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + mail + '\'' +
-                ", registerDate=" + registerdate +
-                '}';
-    }
+   
 }

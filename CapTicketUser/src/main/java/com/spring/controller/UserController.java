@@ -14,20 +14,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.spring.model.User;
-import com.spring.repository.UserRepository;
 import com.spring.response.UserDTO;
+import com.spring.service.UserService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
 	
 	@Autowired
-	private UserRepository urep;
+	private UserService service;
 	
-	
-	@GetMapping("/user")
+	 
+	@GetMapping("/users")
     public List<UserDTO> list() {
-        final List<User> all = urep.findAll();
+        final List<User> all = service.findAll();
         
         return UserDTO.of(all);
     }
@@ -41,7 +41,7 @@ public class UserController {
 	
 	@PostMapping("/save")
     public UserDTO addUser(@RequestBody User user) {
-        final User u = urep.save(user);
+        final User u = service.save(user);
         return UserDTO.of(u);
     }
 	
