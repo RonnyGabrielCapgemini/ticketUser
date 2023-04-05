@@ -23,13 +23,10 @@ public class UserServiceImpl implements UserService {
 		public List<User> findAll(){
 			return userrepo.findAll();
 		}
-	
-	
 	// -- ELIMINAR
 		public void deleteById(int id) {
 			userrepo.deleteById(id);
-		}
-		
+		}		
 	// -- GUARDAR
 		public User save(User user) {
 			return userrepo.save(user);
