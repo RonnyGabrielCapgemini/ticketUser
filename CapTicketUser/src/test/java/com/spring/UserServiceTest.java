@@ -28,8 +28,8 @@ public class UserServiceTest {
 	public void testListarUser() {
 		List<User> users = (List<User>) repo.findAll();
 		
-		for(User producto: users) {
-			System.out.println(producto);
+		for(User usuario: users) {
+			System.out.println(usuario);
 		}
 		
 		// confirma si el tamaño de la lista es maypr que 0
